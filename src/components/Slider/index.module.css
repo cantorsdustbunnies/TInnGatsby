@@ -1,0 +1,97 @@
+.leftButton {
+  left: 0;
+}
+
+.rightButton {
+  right: 0;
+}
+
+.leftButton,
+.rightButton {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+
+
+.activeDot,
+.inActiveDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: #f44336;
+}
+
+.inActiveDot {
+  background-color: #f4433650;
+}
+
+.dotWrapperStyle {
+  display: flex;
+  width: 145px; 
+  height: 40px;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  width: 100vw;
+  height: calc(56.25vw - 60px);
+  max-height: calc(100vh - 60px);
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  overflow: hidden; 
+}
+
+.activeImage { 
+  object-fit: cover; 
+  transform: scale(1.2); 
+  animation: zoomOut 6s linear; 
+  max-height: calc(100vh - 60px); 
+  min-width: 100vw; 
+   
+}
+
+@keyframes zoomOut { 
+  from { 
+    transform: scale(1.2);
+   
+  }
+
+  to { 
+    transform: scale(1); 
+    
+    filter: saturation(1.2); 
+    
+  }
+}
+
+.inActiveImage { 
+  object-fit: contain; 
+  display: none; 
+  
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  }
+}

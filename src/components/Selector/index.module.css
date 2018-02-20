@@ -1,0 +1,16 @@
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  width: 100px;
+  height: 50%;
+  line-height: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  color: #eceff1;
+}

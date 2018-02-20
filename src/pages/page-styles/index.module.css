@@ -1,0 +1,173 @@
+.main { 
+    
+    background-color: #eceff1; 
+    display: flex; 
+    justify-content: space-around; 
+    padding-bottom: 140px; 
+    
+    
+}
+
+.main h3 { 
+    border-right: 1px solid #f44336; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 30vw; 
+}
+
+.tInnHistory {
+    max-width: 50vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-indent: 2.0em; 
+    flex-direction: column; 
+   
+    
+}
+
+.name { 
+    color: #f44336; 
+}
+
+.blurb {
+    line-height: 45px; 
+}
+
+.blurb div {
+    margin-left: 25px; 
+}
+
+.main h3, 
+.tInnHistory  { 
+    
+    margin-top: 80px; 
+    color: #232323a2; 
+}
+
+.neighborhood {
+    height: 75vh; 
+    display: flex; 
+    background-color: #eceff1; 
+}
+
+.neighborhoodMap { 
+    flex: 1; 
+    object-fit: scale-down; 
+    height: 100%; 
+}
+
+.map { 
+    object-fit: contain; 
+    height: 75vh; 
+}
+
+.neighborhoodInfo { 
+    display: flex; 
+    flex: 1; 
+    flex-direction: column; 
+    background-color: #232323a2; 
+    height: 75vh; 
+    background-color: #eceff1; 
+}
+
+
+.luggage { 
+    flex: 1; 
+    background-color: blue; 
+    max-height: 30vh; 
+}
+
+
+.nInfoBlurb { 
+    flex: 1; 
+    min-height: 50%; 
+    padding: 15%; 
+    justify-content: center; 
+    align-items: center; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.nInfoBlurb h3 { 
+    text-align: center; 
+  
+}
+
+.amenities { 
+    min-height: 35vh; 
+    background-color: gainsboro; 
+    padding-bottom: 20px; 
+    
+}
+
+.amenities h2, 
+.amenities h3 { 
+    
+    text-align: center; 
+    width: 100%; 
+}
+
+.amenities > div { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.aBlurb { 
+    max-width: 50vw; 
+    padding: 10%; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.dog { 
+    flex: 1; 
+    min-width: 50vw; 
+    height: 100%; 
+}
+
+.amenities h2 { 
+    text-align: center; 
+    padding-top: 40px; 
+    width: 100%; 
+    font-weight: 500; 
+    
+}
+
+.amenities h2:before,
+.amenities h2:after {
+ background-color: #f44336;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 20%;
+}
+.amenities h2:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+.amenities h2:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
+.Acard { 
+    width: 100vw; 
+    padding: 0; 
+    margin: 0; 
+    min-width: 100vw; 
+}
+
+.aBlurb a, 
+.nInfoBlurb a { 
+    padding: 20px; 
+    background-color: orange; 
+    color: #232323a2; 
+    margin: 0 auto; 
+    align-self: center; 
+}
+

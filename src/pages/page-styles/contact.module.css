@@ -1,0 +1,115 @@
+.contactPage {
+  background: linear-gradient(to top, #eceff1 , #232323 90%);
+}
+
+/* Left Card Styles  */
+.cardWrapper {
+  width: 60vw;
+}
+
+.contactDetails {
+  color: #eceff1;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactDetails h3 {
+  text-align: center;
+  line-height: 0;
+}
+
+.contactList {
+  list-style: none;
+}
+
+.contactList li {
+  display: flex;
+}
+
+.contactItem {
+  margin: 10px;
+  max-width: 80%;
+  line-height: 30px;
+  margin-top: 25px;
+}
+
+.contactListIcon {
+  margin: 8px;
+  color: #eceff182;
+  padding-top: 18px;
+}
+
+.contactMessageSocial {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.contactMessageSocial a {
+  color: #eceff182;
+  cursor: pointer;
+  transition: 800ms all;
+}
+
+.contactMessageSocial a:hover {
+  color: #fff;
+}
+
+/* Right Card Styles */
+
+.contactForm {
+  background-color: #eceff1;
+  height: 70vh;
+  margin: 0;
+  padding: 0;
+  color: #232323;
+  font-weight: 300; 
+ 
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+}
+
+.contactForm label {
+  color: #2323237d;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.contactForm h3 {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.contactForm textarea {
+  height: 200px;
+}
+
+.submitButton {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  margin-top: 43px;
+  background-color: #232323;
+  color: #eceff172;
+  border: 1px solid #eceff1;
+}
+
+.submitButton:hover {
+  background-color: #2acc45;
+  color: #2323237a;
+}
+
+/* media Queries */
+@media screen and (max-width: 800px) {
+  .contactPage {
+    background-color: red;
+    width: 100%;
+  }
+
+  .contactForm input {
+    width: 33%;
+  }
+}

@@ -1,0 +1,43 @@
+.amenities { 
+    min-height: calc(100vh - 60px); 
+    background: linear-gradient(to bottom, #eceff1 , #232323);  
+    width: 100%;  
+    padding-top: 60px; 
+}
+
+.amenities h1 { 
+    text-align: center; 
+    padding-top: 40px; 
+    width: 100%; 
+    font-weight: 500; 
+    
+}
+
+.amenities h1:before,
+.amenities h1:after {
+ background-color: #333;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 20%;
+}
+.amenities h1:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+.amenities h1:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
+
+
+@media screen and (max-width: 800px){ 
+    .amenities h1 { 
+        display: none; 
+    }
+
+    
+}

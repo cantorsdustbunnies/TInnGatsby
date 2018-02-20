@@ -1,0 +1,35 @@
+.mobilePage {
+  min-height: calc(100vh - 60px);
+}
+
+.mobilePageTab {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 66%;
+  height: 60px;
+  margin: 0;
+  clip-path: polygon(0 0, 98% 0, 93% 100%, 0 100%);
+  z-index: 3;
+}
+
+.mobilePageTab h1 {
+  padding-left: 20px;
+  color: #eceff1;
+}
+
+.mobilePageContent {
+  animation: fadeInUp 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.025) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    margin-top: 100%;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: -60px;
+  }
+}

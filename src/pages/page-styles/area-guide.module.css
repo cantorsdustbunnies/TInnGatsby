@@ -1,0 +1,138 @@
+.guideHeader { 
+    
+}
+
+.downIconContainer { 
+    text-align: center; 
+    
+    
+    margin: 0; 
+    padding: 0; 
+    height: calc(20vh - 60px); 
+    
+}
+
+.downIcon {
+    animation: bobUpDown 1.2s ease-in-out 4; 
+    animation-delay: 2s; 
+}
+
+@keyframes bobUpDown{
+    0% { 
+        transform: translateY(-10px); 
+    }
+    50% { 
+        transform: translateY(10px); 
+    }
+    100% { 
+        transform: translateY(-10px); 
+    }
+    
+    
+}
+
+.areaGuide { 
+    padding: 0% 10%; 
+    
+}
+
+
+
+.areaGuide h1 { 
+   
+    text-align: center; 
+    padding-top: 40px; 
+    width: 100%; 
+    font-weight: 500; 
+    color: #4a7aa8; 
+    
+}
+
+
+.areaGuide h1:before,
+.areaGuide h1:after {
+ background-color: #eceff19f;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 20%;
+}
+.areaGuide h1:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+.areaGuide h1:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
+.areaGuide p { 
+    color: #eceff1a2; 
+    padding: 30px; 
+    width: 40vw; 
+    font-weight: 200;
+    line-height: 200%;  
+}
+
+.areaGuide p::first-letter { 
+    padding-left: 30px; 
+}
+
+.guideCardContainer { 
+    min-height: 50vh; 
+    justify-content: center; 
+    display: flex; 
+    width: 100%;
+    flex-wrap: wrap; 
+    flex-basis: 80vw; 
+}
+
+.guideCardTitle {
+    background-color: orange; 
+    color: white; 
+    position: relative; 
+    top: 100%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px; 
+    width: 45%; 
+    font-size: 20px; 
+    text-align: center; 
+}
+
+.eat ul, 
+.ski ul, 
+.explore ul, 
+.sports ul { 
+    list-style: none; 
+    font-weight: 300; 
+}
+
+.explore, 
+.sports, 
+.ski, 
+.eat { 
+    min-width: 20vw; 
+}
+
+
+@media screen and (max-width: 800px){ 
+    .areaGuide { 
+        flex-direction: column; 
+    }
+    .areaGuide p { 
+        width: 80vw; 
+    }
+
+  
+    .guideCardContainer > div { 
+        min-width: 80vw; 
+    }
+
+    .areaGuideIntro { 
+        flex-direction: column; 
+    }
+
+}
