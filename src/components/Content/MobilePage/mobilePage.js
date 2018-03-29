@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './mobilePage.module.css';
 
 const MobilePage = ({ children, tabColor, title, mobileBackground }) => {

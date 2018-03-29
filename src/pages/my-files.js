@@ -2,8 +2,8 @@ import React from 'react';
 
 export default ({ data }) => {
   return (
-    <div>
-      <h1>My Site's Files</h1>
+    <div style={{ color: 'white', padding: '30px 10%' }}>
+      <h1>My Site&apos;s Files</h1>
       <table>
         <thead>
           <tr>
@@ -14,8 +14,8 @@ export default ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.allFile.edges.map(({ node }, index) => (
-            <tr key={index}>
+          {data.allFile.edges.map(({ node }) => (
+            <tr key={node.id}>
               <td>{node.relativePath}</td>
               <td>{node.prettySize}</td>
               <td>{node.extension}</td>

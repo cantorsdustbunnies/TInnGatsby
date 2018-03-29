@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/lib/fa';
 import styles from './index.module.css';
-import Img from 'gatsby-image';
 
 const Button = styled.button`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border: 3px solid #eceff1;
   background-color: #f44336;
   color: #eceff1;
@@ -26,10 +25,10 @@ const SliderButton = ({ children, className, onClick }) => {
 };
 
 const Dots = ({ activeIndex, numberOfSlides, onClick, className }) => {
-  let allDots = [];
+  const allDots = [];
   for (let i = 0; i < numberOfSlides; i++) {
     if (i === activeIndex) {
-      allDots.push(<Dot key={i} id={i} isActive={true} onClick={onClick} />);
+      allDots.push(<Dot key={i} id={i} isActive onClick={onClick} />);
     } else {
       allDots.push(<Dot key={i} id={i} isActive={false} onClick={onClick} />);
     }
@@ -39,15 +38,30 @@ const Dots = ({ activeIndex, numberOfSlides, onClick, className }) => {
 
 const Dot = ({ isActive, onClick, id }) => {
   if (isActive) {
-    return <div id={id} onClick={onClick} className={styles.activeDot} />;
+    return (
+      <div
+        id={id}
+        onClick={onClick}
+        className={styles.activeDot}
+        role="button"
+        tabIndex={0}
+      />
+    );
   } else {
-    return <div id={id} onClick={onClick} className={styles.inActiveDot} />;
+    return (
+      <div
+        id={id}
+        onClick={onClick}
+        className={styles.inActiveDot}
+        role="button"
+        tabIndex={0}
+      />
+    );
   }
 };
 
 const Slides = ({ activeIndex, numberOfSlides, className, images }) => {
-  console.log(images);
-  let allSlides = [];
+  const allSlides = [];
   for (let i = 0; i < numberOfSlides; i++) {
     if (i === activeIndex) {
       allSlides.push(
@@ -55,6 +69,7 @@ const Slides = ({ activeIndex, numberOfSlides, className, images }) => {
           srcSet={images.edges[i].node.sizes.srcSet}
           className={styles.activeImage}
           key={i}
+          alt="slideshow"
         />
       );
     } else {
@@ -63,6 +78,7 @@ const Slides = ({ activeIndex, numberOfSlides, className, images }) => {
           srcSet={images.edges[i].node.sizes.srcSet}
           className={styles.inActiveImage}
           key={i}
+          alt="slideshow"
         />
       );
     }
@@ -94,7 +110,7 @@ export default class Slider extends Component {
   }
 
   onPrevClick() {
-    const { index, numOfSlides } = this.state;
+    const { index } = this.state;
     if (index === 0) {
       this.changeIndex(this.state.numOfSlides - 1);
     } else {
@@ -112,8 +128,7 @@ export default class Slider extends Component {
   }
 
   selectSlide(e) {
-    console.log('the event', e.target);
-    this.changeIndex(parseInt(e.target.id));
+    this.changeIndex(parseInt(e.target.id, 19));
   }
 
   changeIndex(newIndex) {
@@ -123,12 +138,6 @@ export default class Slider extends Component {
     this.setState({
       index: newIndex
     });
-  }
-
-  renderImage(srcSet) {
-    return (
-      <img srcSet={srcSet} className={this.state.imageClasses} key={srcSet} />
-    );
   }
 
   render() {

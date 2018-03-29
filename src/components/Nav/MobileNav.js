@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { navigateTo } from 'gatsby-link';
+import Link, { navigateTo } from 'gatsby-link';
 import Logo from '../../images/Logo.svg';
 import styles from './MobileNav.module.css';
 import { FaBars, FaClose, FaChevronRight } from 'react-icons/lib/fa';
@@ -44,7 +44,7 @@ const MenuButtonBackground = styled.div`
   height: 60px;
 
   align-items: center;
-  background-color: #6f6a54;
+
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 `;
 
@@ -70,6 +70,11 @@ class MobileNav extends Component {
     });
   }
 
+  handleNavigation(path) {
+    navigateTo(path);
+    this.toggleMenu();
+  }
+
   renderButton() {
     if (this.state.open) {
       return <FaClose width={50} height={50} />;
@@ -78,7 +83,7 @@ class MobileNav extends Component {
     }
   }
 
-  renderMenu(divs) {
+  renderMenu() {
     let toggle = styles.menuClosed;
     if (typeof document !== 'undefined') {
       if (document.getElementById('main')) {
@@ -97,6 +102,8 @@ class MobileNav extends Component {
           <div
             style={{ backgroundColor: '#238795' }}
             onClick={() => this.handleNavigation('/photos')}
+            role="link"
+            tabIndex="0"
           >
             <li> Gallery </li>
             <div>
@@ -106,6 +113,8 @@ class MobileNav extends Component {
           <div
             style={{ backgroundColor: '#9b59b6' }}
             onClick={() => this.handleNavigation('/rooms')}
+            role="link"
+            tabIndex="0"
           >
             <li> Rooms </li>
             <div>
@@ -114,9 +123,11 @@ class MobileNav extends Component {
           </div>
           <div
             style={{ backgroundColor: '#d6b375' }}
-            onClick={() => this.handleNavigation('/amenities')}
+            onClick={() => this.handleNavigation('/reviews')}
+            role="link"
+            tabIndex="0"
           >
-            <li>Amenities</li>
+            <li>Reviews</li>
             <div>
               <FaChevronRight />
             </div>
@@ -124,6 +135,8 @@ class MobileNav extends Component {
           <div
             style={{ backgroundColor: '#29bb43' }}
             onClick={() => this.handleNavigation('/contact')}
+            role="link"
+            tabIndex="0"
           >
             <li>Contact</li>
             <div>
@@ -133,6 +146,8 @@ class MobileNav extends Component {
           <div
             style={{ backgroundColor: '#f44336' }}
             onClick={() => this.handleNavigation('/area-guide')}
+            role="link"
+            tabIndex="0"
           >
             <li>Area Guide</li>
             <div>
@@ -144,26 +159,32 @@ class MobileNav extends Component {
     );
   }
 
-  handleNavigation(path) {
-    navigateTo(path);
-    this.toggleMenu();
-  }
-
   render() {
     return (
       <nav className={styles.menu}>
         {this.renderMenu()}
-          <MenuButtonBackground>
+        <MenuButtonBackground>
           <MenuButton onClick={() => this.toggleMenu()}>
             {this.renderButton()}
           </MenuButton>
         </MenuButtonBackground>
-        <img src={Logo} className={styles.logo} />
-        <BookingButton onClick={() => this.handleNavigation('/book-now')}>
-          Book Now
+        <Link to="/" className={styles.logo}>
+          <img src={Logo} className={styles.logo} alt="Travel Inn Logo" />
+        </Link>
+        <BookingButton>
+          <a style={{color: '#eceff1'}} href="https://www.expedia.com/Laramie-Hotels-Travel-Inn.h8038204.Hotel-Information"> 
+          Book Now 
+          </a> 
         </BookingButton>
       </nav>
     );
   }
 }
+
+//Use in place of current Booking Button when we move over to in-house 
+// <BookingButton onClick={() => this.handleNavigation('/book-now')}>
+// Book Now
+// </BookingButton>
+
+
 export default MobileNav;

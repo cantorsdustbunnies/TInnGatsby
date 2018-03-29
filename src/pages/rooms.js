@@ -8,7 +8,6 @@ import AmenitiesCard from '../components/AmenitiesCard/AmenitiesCard';
 import RenderPage from '../components/Content/RenderPage/RenderPage';
 
 export default ({ data }) => {
-  console.log('rooms data', data);
   return (
     <RenderPage tabColor="#9b59b6" title="Rooms">
       <section className={styles.roomsHeader}>
@@ -33,13 +32,13 @@ export default ({ data }) => {
           <div className={styles.headerTitleBlurb}>
             <span>
               {' '}
-              Whether you're here for an event, or just passing through our
+              Whether you&apos;re here for an event, or just passing through our
               <strong> Newly Remodled </strong>
-              rooms and leisure area have just what you'll need. Each of our 30
-              rooms come equipped with a flat screen tv, complementary coffee,
-              free wifi, a microwave, and minifridge. Our location is perfect
-              for exploring Laramie's historic downtown and vibrant night-life.
-              For a full list of things to do check out the
+              rooms and leisure area have just what you&apos;ll need. Each of
+              our 30 rooms come equipped with a flat screen tv, complementary
+              coffee, free wifi, a microwave, and minifridge. Our location is
+              perfect for exploring Laramie&apos;s historic downtown and vibrant
+              night-life. For a full list of things to do check out the
               <Link to="/area-guide"> area-guide </Link>.
             </span>
           </div>
@@ -57,9 +56,9 @@ export default ({ data }) => {
                 <div className={styles.roomCardTitle}>
                   <h2> Single </h2>
                   <span>
-                    There's nothing to be weary about now, traveller. Lay back,
-                    relax. Know that our friendly staff is on hand for anything
-                    you need.
+                    There&apos;s nothing to be weary about now, traveller. Lay
+                    back, relax. Know that our friendly staff is on hand for
+                    anything you need.
                   </span>
                 </div>
               </div>
@@ -131,47 +130,3 @@ export const query = graphql`
     }
   }
 `;
-
-{
-  /* <Img
-          sizes={data.bathroom.childImageSharp.sizes}
-          style={{
-            width: '400px',
-            height: `${1 /
-              data.bathroom.childImageSharp.sizes.aspectRatio *
-              400}px`,
-          }}
-        />
-        <Img
-          sizes={data.double.childImageSharp.sizes}
-          style={{
-            width: '400px',
-            height: `${1 /
-              data.double.childImageSharp.sizes.aspectRatio *
-              400}px`,
-          }}
-        />
-        <Img
-          sizes={data.single.childImageSharp.sizes}
-          style={{
-            position: 'absolute',
-            zIndex: 2,
-            width: '400px',
-            height: `${1 /
-              data.single.childImageSharp.sizes.aspectRatio *
-              400}px`,
-          }}
-        />
-        <Img
-          sizes={data.entryway.childImageSharp.sizes}
-          style={{
-            width: '400px',
-            height: `${1 /
-              data.entryway.childImageSharp.sizes.aspectRatio *
-              400}px`,
-            position: 'absolute',
-            top: 0,
-            left: 0,
-          }}
-        /> */
-}

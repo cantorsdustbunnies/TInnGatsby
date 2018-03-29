@@ -9,6 +9,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 const AdultSelections = ['', '1', '2', '3', '4', '5'];
 const RoomSelections = ['', '1', '2', '3', '4'];
 
+
 export default class BookingBar extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +17,7 @@ export default class BookingBar extends Component {
       startDate: moment(),
       departureDate: moment(new Date()).add(1, 'days'),
       adults: '1',
-      rooms: '1',
+      rooms: '1'
     };
     this.handleDepDateChange = this.handleDepDateChange.bind(this);
     this.handleArrDateChange = this.handleArrDateChange.bind(this);
@@ -26,30 +27,26 @@ export default class BookingBar extends Component {
 
   handleRoomChange(e) {
     this.setState({
-      rooms: e.target.value,
+      rooms: e.target.value
     });
   }
 
   handleAdultChange(e) {
     this.setState({
-      adults: e.target.value,
+      adults: e.target.value
     });
   }
 
   handleArrDateChange(date) {
     this.setState({
-      startDate: date,
+      startDate: date
     });
   }
 
   handleDepDateChange(date) {
     this.setState({
-      departureDate: date,
+      departureDate: date
     });
-  }
-
-  componentWillMount() {
-    //Generate the dates here and put them in the list
   }
 
   render() {
@@ -58,48 +55,48 @@ export default class BookingBar extends Component {
         <Selector
           value={this.state.adults}
           selections={AdultSelections}
-          id={'AdultSelector'}
-          label={'Adults'}
+          id="AdultSelector"
+          label="Adults"
           onChange={this.handleAdultChange}
         />
         <Selector
           value={this.state.rooms}
           selections={RoomSelections}
-          id={'RoomSelector'}
-          label={'Rooms'}
+          id="RoomSelector"
+          label="Rooms"
           onChange={this.handleRoomChange}
         />
-        <label for={'startDate'}>
+        <label htmlFor="startDate">
           Arrive
           <DatePicker
             selected={this.state.startDate}
             onChange={this.handleArrDateChange}
-            id={'startDate'}
+            id="startDate"
             popperPlacement="top-end"
             popperModifiers={{
               offset: {
                 enabled: true,
-                offset: '7vw, 10px',
-              },
+                offset: '7vw, 10px'
+              }
             }}
           />
         </label>
-        <label for={'departureDate'}>
+        <label htmlFor="departureDate">
           Depart
           <DatePicker
             selected={this.state.departureDate}
             onChange={this.handleDepDateChange}
-            id={'departureDate'}
+            id="departureDate"
             popperPlacement="top-end"
             popperModifiers={{
               offset: {
                 enabled: true,
-                offset: '7vw, 10px',
-              },
+                offset: '7vw, 10px'
+              }
             }}
           />
         </label>
-        <BookingButton alt={'Check Availability'}>Book It!</BookingButton>
+        <BookingButton alt="Check Availability">Book It!</BookingButton>
       </div>
     );
   }
@@ -114,4 +111,9 @@ const BookingButton = styled.button`
   outline: none;
   cursor: pointer;
   margin-top: 28px;
+  transition: 800ms;
+  :hover {
+    background-color: #eceff1;
+    color: #6f6a54;
+  }
 `;

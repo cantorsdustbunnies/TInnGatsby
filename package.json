@@ -17,6 +17,7 @@
     "moment": "^2.20.1",
     "react-datepicker": "^1.1.0",
     "react-helmet": "^5.2.0",
+    "react-html5video": "^2.5.1",
     "react-icons": "^2.2.7",
     "react-images": "^0.5.16",
     "react-photo-gallery": "^6.0.22",
@@ -36,15 +37,17 @@
     "prettify": "prettier --write '{./,__{tests,mocks}__}/**/*.+(js|jsx)'"
   },
   "devDependencies": {
-    "postcss-scss": "^1.0.3",
-    "eslint": "^4.9.0",
+    "@cherihung/eslint-config-gatsby": "^1.0.7",
+    "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
-    "prettier": "^1.10.2"
+    "postcss-scss": "^1.0.3",
+    "prettier": "^1.10.2",
+    "surge": "^0.20.1"
   }
 }

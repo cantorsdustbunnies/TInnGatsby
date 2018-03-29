@@ -27,9 +27,7 @@ class RenderPage extends Component {
   }
 
   render() {
-    let isMobile = this.state.width <= 800;
-    console.log('isMobile? = ', isMobile);
-    console.log('width reported by state', this.state.width);
+    const isMobile = this.state.width <= 800;
     if (isMobile) {
       return (
         <MobilePage

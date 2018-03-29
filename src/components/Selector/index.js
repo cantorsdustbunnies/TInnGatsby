@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './index.module.css';
 
 const Selector = ({ value, selections, id, label, onChange }) => {
-  let options = selections.map(item => {
+  const options = selections.map(item => {
     return <option value={item}>{item}</option>;
   });
   return (
-    <label for={id}>
+    <label htmlFor={id}>
       {label}
-      <select id={id} value={value} onChange={onChange}>
+      <select
+        id={id}
+        value={value}
+        style={{ paddingLeft: '5px' }}
+        onChange={onChange}
+      >
         {options}
       </select>
     </label>

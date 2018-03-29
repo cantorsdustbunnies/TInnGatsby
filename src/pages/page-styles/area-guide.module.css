@@ -115,6 +115,17 @@
 .ski, 
 .eat { 
     min-width: 20vw; 
+    
+}
+
+.explore a, 
+.sports a, 
+.ski a, 
+.eat a { 
+    opacity: .9; 
+    color: rgb(232, 151, 0);
+    text-decoration: underline; 
+    
 }
 
 

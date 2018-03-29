@@ -70,11 +70,11 @@ const FooterLinks = styled.ul`
 
 const FooterSocial = styled.div`
   position: relative;
-  width: 320px;
+  width: 220px;
   display: flex;
   justify-content: space-around;
   justify-self: center;
-  left: -50%;
+  left: -25%;
   a {
     color: #eceff1a2;
     transition: 800ms;
@@ -120,9 +120,6 @@ const Footer = () => {
             <Link to="/rooms">
               <li> Rooms </li>
             </Link>
-            <Link to="/amenities">
-              <li> Amenities </li>
-            </Link>
             <Link to="/contact">
               <li> Contact </li>
             </Link>
@@ -155,9 +152,8 @@ const Footer = () => {
       <hr />
       <FooterBottomSection>
         &copy; 2018 Travel Inn Laramie, All Rights reserved. Website by
-        <a style={{ color: '#ff1493' }} href="https://www.polytopek.com">
-          {' '}
-          Polytopek
+        <a style={{ color: '#ff1493' }} href="http://www.polytopek.com">
+           {' '}Polytopek
         </a>
       </FooterBottomSection>
     </FooterSection>

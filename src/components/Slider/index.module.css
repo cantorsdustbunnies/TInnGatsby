@@ -38,7 +38,7 @@
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  top: 76%;
+  top: 79%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -46,7 +46,7 @@
 .wrapper {
   width: 100vw;
   height: calc(56.25vw - 60px);
-  max-height: calc(100vh - 60px);
+  max-height: calc(100vh - 250px); /*change this to - 60px instead of 300 when we implement the bookingbar */
   max-width: 100%;
   top: 0;
   bottom: 0;
@@ -54,6 +54,13 @@
   right: 0;
   position: relative;
   overflow: hidden; 
+}
+
+@media screen and (max-width: 800px){ 
+  .wrapper { 
+    height: calc(56.23vw - 60px); 
+    max-height: calc(100vh - 60px)
+  }
 }
 
 .activeImage { 

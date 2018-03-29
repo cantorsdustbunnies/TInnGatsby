@@ -3,10 +3,18 @@
     background-color: #eceff1; 
     display: flex; 
     justify-content: space-around; 
-    padding-bottom: 140px; 
+    align-items: flex-start;
+    padding-bottom: 120px; 
+    margin: 0; 
+    position: relative; 
+    top: -60px; 
+    padding: 0; 
+
     
     
 }
+
+
 
 .main h3 { 
     border-right: 1px solid #f44336; 
@@ -32,7 +40,7 @@
 }
 
 .blurb {
-    line-height: 45px; 
+    
 }
 
 .blurb div {
@@ -47,9 +55,10 @@
 }
 
 .neighborhood {
-    height: 75vh; 
     display: flex; 
     background-color: #eceff1; 
+    color: #232323a2; 
+
 }
 
 .neighborhoodMap { 
@@ -60,7 +69,8 @@
 
 .map { 
     object-fit: contain; 
-    height: 75vh; 
+    transform: translateY(33%); 
+    
 }
 
 .neighborhoodInfo { 
@@ -68,7 +78,6 @@
     flex: 1; 
     flex-direction: column; 
     background-color: #232323a2; 
-    height: 75vh; 
     background-color: #eceff1; 
 }
 
@@ -88,47 +97,21 @@
     align-items: center; 
     display: flex; 
     flex-direction: column; 
+    
 }
+
+
 
 .nInfoBlurb h3 { 
     text-align: center; 
   
 }
 
-.amenities { 
-    min-height: 35vh; 
-    background-color: gainsboro; 
-    padding-bottom: 20px; 
-    
+.neighborhoodMap h3 {
+    display: none; 
 }
 
-.amenities h2, 
-.amenities h3 { 
-    
-    text-align: center; 
-    width: 100%; 
-}
-
-.amenities > div { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.aBlurb { 
-    max-width: 50vw; 
-    padding: 10%; 
-    display: flex; 
-    flex-direction: column; 
-}
-
-.dog { 
-    flex: 1; 
-    min-width: 50vw; 
-    height: 100%; 
-}
-
-.amenities h2 { 
+.neighborhoodMap h3 { 
     text-align: center; 
     padding-top: 40px; 
     width: 100%; 
@@ -136,8 +119,8 @@
     
 }
 
-.amenities h2:before,
-.amenities h2:after {
+.neighborhoodMap h3:before,
+.neighborhoodMap h3:after {
  background-color: #f44336;
  content: "";
  display: inline-block;
@@ -146,28 +129,245 @@
  vertical-align: middle;
  width: 20%;
 }
-.amenities h2:before {
+.neighborhoodMap h3:before {
  right: 0.5em;
  margin-left: -50%;
 }
-.amenities h2:after {
+.neighborhoodMap h3:after {
  left: 0.5em;
  margin-right: -50%;
 }
 
-.Acard { 
-    width: 100vw; 
-    padding: 0; 
-    margin: 0; 
-    min-width: 100vw; 
+.amenities { 
+    min-height: 35vh; 
+    background-color: gainsboro; 
+    padding-bottom: 20px; 
+    color: #232323a2; 
+    padding-top: 80px; 
+    
+    
 }
+
+.meetUs { 
+    background-color: #eceff1; 
+}
+
+.meetUs h3 { 
+
+}
+
+
+
+.meetUs > h3 { 
+    margin: 0 auto; 
+    padding-top: 20px; 
+    width: 80%; 
+    position: relative; 
+   
+    
+}
+
+.meetUs > h3:before,
+.meetUs > h3:after {
+ background-color: #f44336;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 20%;
+}
+.meetUs > h3:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+.meetUs > h3:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
+.video { 
+    width: 49vw; 
+    height: auto; 
+    margin: 120px 0; 
+}
+
+.amenities > div { 
+    display: flex; 
+  
+}
+.meetUs h3, 
+.amenities h2, 
+.amenities h3 { 
+    
+    text-align: center; 
+    width: 80%; 
+}
+
+
+.AmenitiesCard { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    background-color: red; 
+}
+
+
+
+.aBlurb { 
+
+    flex: 1; 
+    min-height: 50%; 
+    padding: 15%; 
+    justify-content: center; 
+    align-items: center; 
+    display: flex; 
+    flex-direction: column; 
+    min-width: 40vw; 
+    
+}
+
+.aBlurb p { 
+    min-width: 35vw; 
+    text-align: center; 
+    
+}
+
+
+.dog { 
+    flex: 1; 
+    min-width: 50vw; 
+    height: 80%; 
+    margin-top: 10%; 
+}
+
+.aBlurb h3 { 
+    text-align: center; 
+    padding-top: 40px; 
+    width: 100%; 
+    font-weight: 500; 
+    
+}
+
+.amenities > h3 { 
+    margin: 0 auto; 
+    padding-top: 20px; 
+    
+}
+
+.amenities > h3:before,
+.amenities > h3:after {
+ background-color: #f44336;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 20%;
+}
+.amenities > h3:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+.amenities > h3:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
+
 
 .aBlurb a, 
 .nInfoBlurb a { 
     padding: 20px; 
     background-color: orange; 
     color: #232323a2; 
-    margin: 0 auto; 
+    text-align: center; 
     align-self: center; 
 }
 
+@media screen and (max-width: 800px){ 
+    .tInnHistory { 
+        width: 90vw; 
+        max-width: 100vw; 
+        align-items: center; 
+    }
+
+    .main { 
+        flex-direction: column; 
+        align-items: center; 
+        max-width: 100vw; 
+        margin-bottom: 0; 
+        padding: 0; 
+    }
+
+    .main h3 { 
+        width: 80vw; 
+        margin: 5% 0; 
+        margin-top: 15%; 
+        padding-right: 10%; 
+    }
+    .tInnHistory { 
+        padding-top: 0; 
+        margin-top: 10%; 
+    }
+
+    .neighborhood { 
+        flex-direction: column; 
+        padding: 0; 
+        
+    }
+
+    .neighborhoodMap h3 {
+        display: block;
+        width: 80vw; 
+        margin: 0 auto; 
+    }
+
+    .neighborhoodInfo { 
+        flex-direction: column-reverse; 
+        padding-top: 15%; 
+    }
+
+    .nInfoBlurb p { 
+        width: 90vw; 
+        text-align: center; 
+    }
+
+    .amenities > div { 
+        display: flex; 
+        flex-direction: column-reverse; 
+    }
+
+    .aBlurb { 
+        max-width: 100vw; 
+        width: 90vw; 
+        margin: 0 auto; 
+        display: flex; 
+        flex-direction: column; 
+    }
+
+    .aBlurb h3 { 
+        margin: 15px auto; 
+    }
+
+    .aBlurb p { 
+        width: 90vw; 
+    }
+
+ 
+
+    .dog { 
+        width: 100vw; 
+        padding-top: 15px; 
+        margin-top: 20px; 
+    }
+
+    .amenities > div { 
+        display: flex; 
+        padding-top: 80px; 
+    }
+  
+
+
+
+}

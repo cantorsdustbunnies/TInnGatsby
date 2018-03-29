@@ -68,6 +68,9 @@
   width: 150px;
   margin-right: 2px;
   background-color: #f44336;
-  content: 'blab';
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+
+}
+.bookingButton a { 
+  color: #eceff1 !important; 
 }

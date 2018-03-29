@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
@@ -6,9 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './index.css';
 
-import MobilePage from '../components/Content/MobilePage/mobilePage';
-
-let links = ['photos', 'rooms', 'amenities', 'contact', 'area-guide'];
+const links = ['photos', 'rooms', 'contact', 'area-guide']; //add reviews when we get the button
 
 const TemplateWrapper = ({ children }) => {
   return (

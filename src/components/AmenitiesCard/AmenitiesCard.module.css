@@ -1,8 +1,8 @@
 .amenitiesGrid { 
     display: flex; 
-    width: 80%; 
+    width: 100%; 
     min-height: 50%; 
-    border: 1px solid #d6b375; 
+   
     flex-wrap: wrap; 
     max-width: 1200px; 
     margin: 0 auto; 
@@ -29,7 +29,7 @@
 
 .amenitiesGridCaption { 
     text-align: center; 
-    background-color: #d6b375a2; 
+    background-color: orange; 
     font-weight: 300;
     font-size: 12px;  
     width: 100%;
@@ -37,8 +37,3 @@
 
 }
 
-@media screen and (max-width: 800px){ 
-    .amenitiesGrid { 
-        max-width: 80%; 
-    }
-}

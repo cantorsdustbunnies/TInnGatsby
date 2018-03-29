@@ -4,10 +4,9 @@ import { MdPlace, MdLocalPhone, MdMailOutline } from 'react-icons/lib/md';
 import { FaTripadvisor, FaFacebookSquare } from 'react-icons/lib/fa';
 import RenderPage from '../components/Content/RenderPage/RenderPage';
 import Cards from '../components/Content/DesktopPage/Cards/Cards';
-import Link from 'gatsby-link';
 
 const ContactForm = () => (
-  <form name="contact" netlify className={styles.contactForm}>
+  <form name="contact" action="https://formspree.io/Travelinnwy@yahoo.com" method="POST" className={styles.contactForm}>
     <h3> Have a question? </h3>
     <p>
       <label htmlFor="name">
@@ -15,8 +14,8 @@ const ContactForm = () => (
       </label>
     </p>
     <p>
-      <label htmlFor="email">
-        Email:<input type="email" name="email" />
+      <label htmlFor="_replyto">
+        Email:<input type="email" name="_replyto" />
       </label>
     </p>
     <p>
@@ -25,7 +24,7 @@ const ContactForm = () => (
       </label>
     </p>
     <p>
-      <button className={styles.submitButton}>Send</button>
+      <input type="submit" value="Send" className={styles.submitButton} /> 
     </p>
   </form>
 );
@@ -50,7 +49,7 @@ const ContactDetails = () => (
         <p className={styles.contactListIcon}>
           <MdMailOutline width={20} height={20} />
         </p>
-        <p className={styles.contactItem}>travelInn@gmail.com</p>
+        <p className={styles.contactItem}>Travelinnwy@yahoo.com</p>
       </li>
     </ul>
     <div className={styles.contactMessageSocial}>
@@ -64,13 +63,13 @@ const ContactDetails = () => (
   </div>
 );
 
-export default ({ data }) => {
+export default () => {
   return (
     <RenderPage
       tabColor="#29bb43"
       title="Contact Us"
       className={styles.contactPage}
-      mobileBackground="linear-gradient(to top, #813cf1 10%, #232323 90%)"
+      mobileBackground="linear-gradient(to top, #eceff1 10%, #232323 90%)"
     >
       <Cards
         LeftComponent={ContactDetails}

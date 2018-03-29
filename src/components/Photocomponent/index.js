@@ -19,7 +19,7 @@ class PhotoComponent extends Component {
     const imgStyle = {
       display: 'block',
       float: 'left',
-      margin: margin,
+      margin
     };
     return (
       <Img

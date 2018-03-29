@@ -16,6 +16,6 @@ export default () => (
     <h1> 404 </h1>
     <MdRoomService width={123} height={123} />
     <h3> Uh Oh... </h3>
-    <p> Kelly hasn't made this page yet </p>
+    <p> Kelly hasn&apos;t made this page yet </p>
   </div>
 );

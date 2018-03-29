@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Link from 'gatsby-link';
 import Nav from '../Nav/Nav';
 import MobileNav from '../Nav/MobileNav';
 
@@ -15,10 +14,10 @@ export default class Header extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
-    this.handleResize(); 
+    this.handleResize();
   }
 
-  componentWillUnMount() {
+  componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
   }
 

@@ -1,6 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
-import Link from 'gatsby-link';
 import styles from './page-styles/photos.module.css';
 import TInnGallery from '../components/TInnGallery';
 import RenderPage from '../components/Content/RenderPage/RenderPage';
@@ -17,12 +15,12 @@ const blurbStyle = {
   color: '#eceff1',
   flex: 0.5,
   boxShadow: '-2px 2px 6px #232323a2',
-  padding: '10px',
+  padding: '10px'
 };
 
 const photoStyle = {
   margin: '2px',
-  boxShadow: '2px 2px 6px #232323a2',
+  boxShadow: '2px 2px 6px #232323a2'
 };
 
 export default ({ data }) => {
@@ -35,11 +33,9 @@ export default ({ data }) => {
       width: 3 * image.node.sizes.aspectRatio,
       height: 3,
       style: photoStyle,
-      className: styles.filter,
+      className: styles.filter
     };
   });
-
-  const Gallery = () => <TInnGallery images={photos} />;
 
   return (
     <RenderPage tabColor="#238795" title="Gallery">
@@ -48,9 +44,9 @@ export default ({ data }) => {
         RightComponent={() => <TInnGallery images={photos} />}
         leftStyle={blurbStyle}
         rightStyle={photoStyle}
-        title={'Gallery'}
+        title="Gallery"
         style={{
-          background: 'linear-gradient(to bottom, white, #232323)',
+          background: 'linear-gradient(to bottom, white, #232323)'
         }}
         color="#238795"
       />

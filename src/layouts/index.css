@@ -126,6 +126,7 @@ select,
 textarea {
   font: inherit;
   margin: 0;
+  padding-left: 5px; 
 }
 optgroup {
   font-weight: 700;
